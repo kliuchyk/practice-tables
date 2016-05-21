@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables</title>
+</head>
+<body>
+    <h1>Tables</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Summary</th>
+                <th>quarter I</th>
+                <th>quarter II</th>
+            </tr>
+             <tr>
+                <th>results</th>
+                <th>results</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>january</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>fabruary</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td colspan="2">100</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <form method="GET" action="">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name"><br>
+        
+        <label>Password</label>
+        <input type="password"><br>
+        
+        <label>Email:</label>
+        <input type="email"><br>
+        
+        <label>Passport</label>
+        <input type="text" pattern="[A-Z](2)[0-9](6)">
+        
+        <input type="submit"><br>
+    </form>
+</body>
+</html>
