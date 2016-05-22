@@ -1,55 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Tables</title>
+	<meta charset="UTF-8">
+	<title>Forms and Tables</title>
 </head>
 <body>
-    <h1>Tables</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th rowspan="2">Summary</th>
-                <th>quarter I</th>
-                <th>quarter II</th>
-            </tr>
-             <tr>
-                <th>results</th>
-                <th>results</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>january</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>fabruary</td>
-                <td>2</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td colspan="2">100</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <form method="GET" action="">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name"><br>
-        
-        <label>Password</label>
-        <input type="password"><br>
-        
-        <label>Email:</label>
-        <input type="email"><br>
-        
-        <label>Passport</label>
-        <input type="text" pattern="[A-Z](2)[0-9](6)">
-        
-        <input type="submit"><br>
-    </form>
+	<main>
+		<header>
+			<h1>FORMS AND TABLES</h1>
+		</header>
+		<article>
+			<section id="forms">
+				<h2>FORMS</h2>
+				<h3>Basic Controls </h3>
+				<form action="https://formspree.io/kliuchyk@gmail.com" method="POST">
+					<label for="name">Name</label><br>
+					<input type="text" name="name" id="name" placeholder="type your name here..." required><br>
+
+					<label for="password">Password</label><br>
+					<input type="password" name="password" id="password" placeholder="your password goes here..." required><br><br>
+
+					<label for="t-area">Give some nice feedback</label><br>
+					<textarea name="textarea" id="t-area" cols="30" rows="10" >
+					</textarea><br>
+
+					<h2>Buttons</h2>
+
+					<input type="button" value="I'm a button" onclick="alert('Hello there!')"><br><br>
+					<input type="submit" value="Submit Query"><br>
+
+					<h2>Additional Controls</h2>
+					
+					<fieldset>
+						<legend>Pawn Promotion</legend>
+							<input type="radio" name="piece" value="queen" id="pp-queen" checked>
+							<label for="pp-queen">Queen</label>
+							<input type="radio" name="piece" value="knight" id="pp-knight">
+							<label for="pp-knight">Knight</label><br>
+							<input type="radio" name="piece" value="bishop" id="pp-bishop">
+							<label for="pp-bishop">Bishop</label>
+							<input type="radio" name="piece" value="rook" id="pp-rook">
+							<label for="pp-rook">Rook</label>
+					</fieldset>
+
+					<fieldset>
+						<legend>Pieces left</legend>
+							<input type="checkbox" name="piece2" id="king" value="king">
+							<label for="king">King</label><br>
+							<input type="checkbox" name="piece2" id="queen" value="queen">
+							<label for="queen">Queen</label><br>
+							<input type="checkbox" name="piece2" id="knight" value="knight">
+							<label for="knight">Knight</label><br>
+							<input type="checkbox" name="piece2" id="rook" value="rook" checked>
+							<label for="rook">Rook</label>
+					</fieldset><br>
+
+					<label for="favorite">Select your favorite pice</label><br>
+					<select name="select" id="favorite">
+						<option value="queen">Quenn</option>
+						<option value="king">King</option>
+						<option value="bishop" selected>Bishop</option>
+						<option value="rook">Rook</option>
+						<option value="bishop">Bishop</option>
+						<option value="pawn">Pawn</option>
+					</select><br><br>
+
+					<label for="u-pic">Upload a picture <br> <input type="file"></label><br>
+
+					<h2>Special input types</h2>
+
+					<label for="email1">Email</label><br>
+					<input id="email1"  name="email" type="email" placeholder="name@mail.com"><br>
+
+					<label for="web">Website</label><br>
+					<input id="web"  name="url" type="url"><br>
+
+					<label for="phone">Phone</label><br>
+					<input id="phone" name="phoneNumber" type="tel"><br>
+
+					<label for="range1">Range (low or high)</label><br>
+					<input id="range1" type="range"><br>
+
+					<label for="search1">Search</label><br>
+					<input id="search1" name="searching" type="search"><br>
+
+					<label for="hue">Favorite Hue</label><br>
+					<input type="color" name="hueOption" id="hue"><br>
+
+					<label for="guess">Choose a number</label><br>
+					<input type="number" name="number" id="guess"><br>
+
+					<label for="title">Your Title</label><br>
+					<input type="text" id="title" name="title" list="titles">
+						<datalist id="titles">
+							<option value="Mr.">
+							<option value="Ms.">
+							<option value="Mrs.">
+							<option value="Miss.">
+							<option value="Dr.">
+						</datalist><br>
+
+						<input type="submit" name="submitF" value="SEND"><br>
+
+				</form>
+			</section> <!-- forms -->
+			<section>
+
+				<h2>Tables</h2>
+
+				<table border="1">
+					<caption>The Groacery List</caption>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Quantity</th>
+							<th>Aisle</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Oranges</td>
+							<td> 2kg</td>
+							<td> 3</td>
+							<td>$ 3.55</td>
+						</tr>
+						<tr>
+							<td>Bananas</td>
+							<td> 3kg</td>
+							<td> 3</td>
+							<td>$ 2.45</td>
+						</tr>
+						<tr>
+							<td>Milk</td>
+							<td> 2l</td>
+							<td> 7</td>
+							<td>$ 4.20</td>
+						</tr>	
+						<tr>
+							<td>Bread</td>
+							<td> 2p</td>
+							<td> 11 </td>
+							<td>$ 5.75</td>
+						</tr>				
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>All</td>
+							<td>N/A</td>
+							<td>N/A</td>
+							<td>$ 16.35</td>
+						</tr>
+					</tfoot>
+				</table><br>
+
+
+				<table border="1">
+					<tr>
+						<th rowspan="2">header</th>
+						<th>header</th>
+						<th>header</th>
+					</tr>
+					<tr>
+						<th>header</th>
+						<th>header</th>
+					</tr>
+					<tr>
+						<td>january</td>
+						<td>12</td>
+						<td>11</td>
+					</tr>
+					<tr>
+						<td>fabruary</td>
+						<td>12</td>
+						<td>11</td>
+					</tr>
+					<tr>
+						<td>Total</td>
+						<td colspan="2">121111</td>
+					</tr>
+				</table>
+			</section> <!-- </section> tables -->
+		</article>
+	</main>
 </body>
 </html>
